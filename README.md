@@ -1,1 +1,1 @@
-# flask_NLP_machine_learning_french
+# sentence_sentiment_positif_negatif_french
