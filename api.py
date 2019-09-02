@@ -1,7 +1,6 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
 import sys
-sys.path.insert(0, './app')
 from ML_models import *
 import json
 
@@ -13,7 +12,7 @@ class sentiment(Resource):
     def get(self, prediction):
         
        # p = run_model(prediction)       
-       # return {p: "ss"}
+       # return {p: "sss"}
        prediction = [request.form['data']]
        return run_model(prediction)
 api.add_resource(sentiment, '/<string:prediction>')

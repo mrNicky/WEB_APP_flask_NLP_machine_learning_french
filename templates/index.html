@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h3>C'est {{ user.username }}, ce site vous permettra d'analyser les sentiments d'un texte grâce au machine learning!</h3>
+	
+	
+	<form action="{{ url_for('predict')}}" method="POST">
+		<p>Entrer votre message</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="4" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+		
+	</form> 
+    
+    </body>
+</html>
