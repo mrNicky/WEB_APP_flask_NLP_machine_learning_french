@@ -1,0 +1,15 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+
+table {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+} 

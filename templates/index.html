@@ -1,20 +1,40 @@
-<html>
-    <head>
-        <title>{{ title }}</title>
-    </head>
-    <body>
-        <h3>C'est {{ user.username }}, ce site vous permettra d'analyser les sentiments d'un texte grâce au machine learning!</h3>
-	
-	
-	<form action="{{ url_for('predict')}}" method="POST">
-		<p>Entrer votre message</p>
-		<!-- <input type="text" name="comment"/> -->
-		<textarea name="message" rows="4" cols="50"></textarea>
-		<br/>
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+  {{ super() }}
 
-		<input type="submit" class="btn-info" value="predict">
-		
-	</form> 
-    
-    </body>
-</html>
+
+
+{% endblock %}
+{% block content %}
+
+
+<div class="starter-template">
+
+
+    	<form action="{{ url_for('predict')}}" method="POST">
+        <div>
+        {% if msg %}
+        <p>{{ msg }}</p>
+        {% endif %}
+        </div>
+
+    		<p>ENTRER VOTRE MESSAGE</p>
+    		<!-- <input type="text" name="comment"/> -->
+    		<textarea name="message" rows="4" cols="50"></textarea>
+    		<br/>
+
+    		<input type="submit" class="btn-info" value="predict">
+
+    	</form>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Analyser les sentiments d'un texte grâce à l'intelligence artificielle</h1>
+        <p class="lead">Grâce au NLP : natural language processing <br> Nous pouvons savoir si votre texte est plutôt négatif ou positif</p>
+      </div>
+</div>
+    </div><!-- /.container -->
+
+{% endblock %}

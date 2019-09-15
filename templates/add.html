@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block title %}Add{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+<div class="starter-template">
+
+<h2> Ajout dans la base de données </h2>
+
+	<form action = "{{ url_for('added') }}" method = "POST">
+
+	Votre tweet : <br>
+	<textarea name="tweet"></textarea><br>
+<br/>
+	Si négative: 0 si positive: 1 <br>
+	<textarea name="label"></textarea><br>
+	<input type = "submit" value = "submit" /><br>
+
+<table class="table">
+	<br/>
+	<p>LES DERNIERS TWEETS AJOUTES</p>
+	         <thead >
+	            <th>label</th>
+	            <th>tweet</th>
+
+	         </thead>
+
+	         {% for row in rows %}
+	            <tr>
+	              {% if row["label"] == '0' %}
+								 <td>Négatif</td>
+								{% else %}
+								 <td>Positif</td>
+								{% endif %}
+	               <td>{{row["tweet"]}}</td>
+						{% endfor %}
+	            </tr>
+
+	      </table>
+</div>
+
+
+
+{% endblock %}
