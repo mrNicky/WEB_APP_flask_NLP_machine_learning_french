@@ -2,7 +2,7 @@
 
 ## Analyser les sentiments d'une phrase (plutôt positif ou négatif)
 
-[NLP 101]:https://nlp101.herokuapp.com/
+[NLP 101 site](https://nlp101.herokuapp.com/)
 
 
 ### Stack technique utilisée
